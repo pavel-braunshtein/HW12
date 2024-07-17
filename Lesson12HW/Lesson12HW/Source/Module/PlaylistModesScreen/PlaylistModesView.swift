@@ -15,5 +15,7 @@ class PlaylistModesView: UIView {
     
     @IBOutlet weak var tableView: UITableView!
     
+    
+    
     weak var delegate: PlaylistModesViewDelegate?
 }

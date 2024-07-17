@@ -9,7 +9,7 @@ import UIKit
 
 extension UIView {
     
-    var reuseIdentifier: String {
+    static var reuseIdentifier: String {
         get {
             return String(describing: self)
         }

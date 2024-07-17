@@ -26,7 +26,7 @@ class MainModel {
                 type: .showLsit
             ),
             TaskItem(
-                title: "Завдання 2:\nПоказати список з можливістю видалення (Swipe to delete) елементу зі списку однією секцією", 
+                title: "Завдання 2:\nПоказати список з можливістю видалення (Swipe to delete) елементу зі списку однією секцією",
                 type: .playlistDeleteItem
             ),
             TaskItem(

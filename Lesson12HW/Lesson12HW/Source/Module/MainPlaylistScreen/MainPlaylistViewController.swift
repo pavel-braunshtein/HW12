@@ -27,6 +27,7 @@ class MainPlaylistViewController: UIViewController {
         
         contentView.tableView.dataSource = self
         contentView.tableView.delegate = self
+        contentView.tableView.registerMainPlaylistCell()
     }
 }
 
@@ -48,13 +49,16 @@ extension MainPlaylistViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MainPlaylistCell")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MainPlaylistCell.reuseIdentifier) as? MainPlaylistCell
         else {
             assertionFailure()
             return UITableViewCell()
         }
         
-        cell.textLabel?.text = model.items[indexPath.row].songTitle
+        cell.songLabel.text = model.items[indexPath.row].songTitle
+        cell.authorLabel.text = model.items[indexPath.row].author
+        cell.albumLabel.text = model.items[indexPath.row].albumTitle
+        cell.genreLabel.text = model.items[indexPath.row].genre
         
         return cell
     }

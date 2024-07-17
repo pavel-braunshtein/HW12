@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import UIKit
+
+extension UITableView {
+    
+    func registerMainPlaylistCell () {
+        
+        let nib = UINib (nibName: "MainPlaylistCell", bundle: nil)
+        
+        register(nib, forCellReuseIdentifier: MainPlaylistCell.reuseIdentifier)
+    }
+}
